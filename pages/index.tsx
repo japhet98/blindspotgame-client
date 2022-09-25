@@ -1,15 +1,28 @@
-import Link from 'next/link'
 import Layout from '../components/Layout'
-
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </Layout>
-)
+import WelcomComponent from '../components/Welcome'
+import {preLoadGame} from '../actions/endpoints';
+type Props={
+  unCompletedGame:Object|null,
+  artistAlbums:Object|null,
+}
+function  IndexPage (props:Props){
+  return(
+    <Layout title="Home | BlindSpot Technical Interview">
+   
+    <WelcomComponent {...props}/>
+    
+   </Layout>
+  )
+}
 
 export default IndexPage
+
+
+export async function getStaticProps(){
+  const data = await preLoadGame();
+  return {
+   props:{
+   ...data
+  }
+  }
+}
