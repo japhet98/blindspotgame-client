@@ -23,7 +23,7 @@ export const ToggleGameButton =(prop:buttonProps) => {
 }
 const Descriptions = ()=>{
     return (
-        <figure className="md:flex md:w-6/12 md:mx-auto mt-3 bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+        <figure className="md:flex md:w-6/12 md:mx-auto mt-3 rounded-xl p-8 md:p-0 dark:bg-slate-800">
   <div className="md:pt-6 pt-2 md:p-8 text-center">
         <b>INSTRUCTIONS</b>
       <ol className="text-lg font-medium  list-decimal">
