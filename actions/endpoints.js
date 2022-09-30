@@ -6,7 +6,7 @@ export const createGame = async({artistId})=>{
             "content-type": "application/json"
         }
     })
-    return game?.data;
+    return game;
 }
 
 export const preLoadGame = async()=>{  
