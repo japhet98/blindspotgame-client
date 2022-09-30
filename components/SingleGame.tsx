@@ -32,7 +32,7 @@ return (
 }
 
 const GameQuestionAnswer =({questions,gameId,game})=>{
-  const {rounds,attempts}= game;
+
   const [state,setState] = useState({
     artistName:"",
     questions:[],
@@ -140,7 +140,7 @@ const Submit = async(e:any)=>{
         </div>
           
           
-      </div>:        <input type="text" placeholder='Enter artist full name here' name="artistName" onChange={handlInput}  className="block mt-5 mb-5 text-center md:text-2xl md:w-8/12 mx-auto rounded-md p-2 border-gray-300 pl-7 pr-12 outline outline-md outline-indigo-500 " />        
+      </div>:        <input type="text" placeholder='Enter artist full name here' required name="artistName" onChange={handlInput}  className="block mt-5 mb-5 text-center md:text-2xl md:w-8/12 mx-auto rounded-md p-2 border-gray-300 pl-7 pr-12 outline outline-md outline-indigo-500 " />        
 
        }
   
