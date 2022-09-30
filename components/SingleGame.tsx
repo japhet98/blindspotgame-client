@@ -32,7 +32,7 @@ return (
 }
 
 const GameQuestionAnswer =({questions,gameId,game})=>{
-  const {rounds,attempts}= game;
+
   const [state,setState] = useState({
     artistName:"",
     questions:[],

@@ -1,15 +1,12 @@
 import Layout from '../components/Layout'
 import WelcomComponent from '../components/Welcome'
 import {preLoadGame} from '../actions/endpoints';
-type Props={
-  unCompletedGame:Object|null,
-  artistAlbums:Object|null,
-}
-function  IndexPage (props:Props){
+
+function  IndexPage (){
   return(
     <Layout title="Home | BlindSpot Technical Interview">
    
-    <WelcomComponent {...props}/>
+    <WelcomComponent />
     
    </Layout>
   )
@@ -17,12 +14,3 @@ function  IndexPage (props:Props){
 
 export default IndexPage
 
-
-export async function getServerSideProps(){
-  const data = await preLoadGame();
-  return {
-   props:{
-   ...data
-  }
-  }
-}
