@@ -1,0 +1,83 @@
+{
+    "_id": "632f59112cd28a06360e08c7",
+    "ipAddress": "::ffff:127.0.0.1",
+    "isResetted": false,
+    "isComplete": true,
+    "totalPoint": 14,
+    "created_at": "2022-09-24T19:22:57.571Z",
+    "updated_at": "2022-09-24T19:22:57.571Z",
+    "__v": 0,
+    "userId": "632dbaf4ddca8fcba3d4f086",
+    "rounds": [
+      {
+        "_id": "632f59ea4ef931b62c01b5b1",
+        "point": 5,
+        "gameId": "632f59112cd28a06360e08c7",
+        "roundType": "First Round",
+        "attemptLevel": 1,
+        "isAnswered": true,
+        "created_at": "2022-09-24T19:26:34.799Z",
+        "updated_at": "2022-09-24T19:26:34.799Z",
+        "__v": 0,
+        "id": "632f59ea4ef931b62c01b5b1"
+      },
+      {
+        "_id": "632f5a094ef931b62c01b5b5",
+        "point": 0,
+        "gameId": "632f59112cd28a06360e08c7",
+        "roundType": "Second Round",
+        "attemptLevel": 4,
+        "isAnswered": false,
+        "created_at": "2022-09-24T19:27:05.988Z",
+        "updated_at": "2022-09-24T19:27:05.988Z",
+        "__v": 0,
+        "id": "632f5a094ef931b62c01b5b5"
+      },
+      {
+        "_id": "632f5a1f4ef931b62c01b5b9",
+        "point": 3,
+        "gameId": "632f59112cd28a06360e08c7",
+        "roundType": "Third Round",
+        "attemptLevel": 2,
+        "isAnswered": true,
+        "created_at": "2022-09-24T19:27:27.028Z",
+        "updated_at": "2022-09-24T19:27:27.028Z",
+        "__v": 0,
+        "id": "632f5a1f4ef931b62c01b5b9"
+      },
+      {
+        "_id": "632f5a374ef931b62c01b5be",
+        "point": 1,
+        "gameId": "632f59112cd28a06360e08c7",
+        "roundType": "Fourth Round",
+        "attemptLevel": 3,
+        "isAnswered": true,
+        "created_at": "2022-09-24T19:27:51.559Z",
+        "updated_at": "2022-09-24T19:27:51.559Z",
+        "__v": 0,
+        "id": "632f5a374ef931b62c01b5be"
+      },
+      {
+        "_id": "632f5a5c4ef931b62c01b5c2",
+        "point": 5,
+        "gameId": "632f59112cd28a06360e08c7",
+        "roundType": "Final Round",
+        "attemptLevel": 1,
+        "isAnswered": true,
+        "created_at": "2022-09-24T19:28:28.912Z",
+        "updated_at": "2022-09-24T19:28:28.912Z",
+        "__v": 0,
+        "id": "632f5a5c4ef931b62c01b5c2"
+      }
+    ],
+    "user": {
+      "_id": "632dbaf4ddca8fcba3d4f086",
+      "username": "japhet",
+      "created_at": "2022-09-23T13:56:04.596Z",
+      "updated_at": "2022-09-23T13:56:04.596Z",
+      "__v": 0,
+      "id": "632dbaf4ddca8fcba3d4f086"
+    },
+    "id": "632f59112cd28a06360e08c7"
+  
+}
