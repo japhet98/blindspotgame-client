@@ -3,18 +3,18 @@ import { ToggleGameButton } from "./Welcome";
 
 export default function ScoreBoard({games}){
     return(
-<div className="flex flex-col">
+<div className="flex md:flex-col">
         <div className="min-w-screen  bg-gray-100 flex flex flex-col items-center justify-center bg-gray-100 font-sans ">
-            <div className="w-full lg:w-5/6">
+            <div className="w-full md:w-5/6">
                 <div className="bg-white shadow-md rounded my-6">
-                <table className="min-w-max w-full table-auto">
+                <table className="md:min-w-max md:w-full table-auto">
                 <thead>
                             <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-                                <th className="py-3 px-6 text-left">Position</th>
-                                <th className="py-3 px-6 text-left">Point</th>
-                                <th className="py-3 px-6 text-center">Username</th>
-                                <th className="py-3 px-6 text-center">Badge</th>
-                                <th className="py-3 px-6 text-center">Create Competition </th>
+                                <th className="py-3 px-7 text-left">Position</th>
+                                <th className="py-3 px-7 text-left">Point</th>
+                                <th className="py-3 pr-7 text-center">Username</th>
+                                <th className="py-3  pr-7 text-center">Badge</th>
+                                {/* <th className="py-3 px-6 text-center ">Create Competition </th> */}
                             </tr>
                         </thead>
                         <tbody className="text-gray-600 text-sm font-light">
@@ -27,15 +27,15 @@ export default function ScoreBoard({games}){
                                 <td className="py-3 px-6 text-left whitespace-nowrap">
                                     {game?.totalPoint}
                                 </td>
-                                <td className="py-3 px-6 text-left whitespace-nowrap">
+                                <td className="py-3 md:pl-32 text-left whitespace-nowrap">
                                     {game?.user?.username}
                                 </td>
-                                <td className="py-3 px-6 text-left whitespace-nowrap">
+                                <td className="py-3 md:pl-32 text-left whitespace-nowrap">
                                 <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full ">{index===0?"Lead":"Other"}</span>
                                 </td>
-                                <td className="py-3 px-6 text-left whitespace-nowrap">
-                                   <ToggleGameButton name="Create Competition" />
-                                </td>
+                                {/* <td className="py-3 px-6 text-left text-sm whitespace-nowrap">
+                                   <ToggleGameButton name="Competit" />
+                                </td> */}
                                 </tr>
                                 ))
                             }
