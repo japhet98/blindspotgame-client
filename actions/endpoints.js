@@ -1,6 +1,6 @@
 import axios from 'axios';
 const baseEndpoint = process.env.NEXT_PUBLIC_API_ENDPOINT;
-export const createGame = async(artistId)=>{
+export const createGame = async({artistId})=>{
    const game = await axios.post(`${baseEndpoint}/games`,JSON.stringify({artistId}),{
         headers:{
             "content-type": "application/json"
