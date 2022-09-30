@@ -26,7 +26,6 @@ const Layout = ({ children, title = 'This is the default title' }: Props) => (
     newestOnTop={false}
     closeOnClick
     rtl={false}
-    pauseOnFocusLoss
     draggable
     pauseOnHover
     />

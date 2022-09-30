@@ -1,6 +1,6 @@
 
 import { toast, } from 'react-toastify';
-const closeTime = 3000;
+const closeTime = 2000;
 export const SuccessToast=(message:string)=>{
     return toast.success(message, {
         position: "top-right",
@@ -9,19 +9,20 @@ export const SuccessToast=(message:string)=>{
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        progress: undefined,
+        draggablePercent:100
+      
         });
 }
 
 export const WarningToast=(message:string)=>{
-    return toast.warning(message, {
+    return toast.warn(message, {
         position: "top-right",
         autoClose: closeTime,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        progress: undefined,
+        draggablePercent:100
         });
 }
 
@@ -33,6 +34,6 @@ export const ErrorToast=(message:string)=>{
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
-        progress: undefined,
+        draggablePercent:100
         });
 }

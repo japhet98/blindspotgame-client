@@ -91,10 +91,15 @@ const Submit = async(e:any)=>{
   
     else {
       WarningToast(_response?.data?.message)
+      setState(prevState=>({
+        ...prevState,
+        attempt:--state.attempt
+       }))
     }
   } catch (error) {
     if(error?.response?.data?.message?.includes("validation")){
       WarningToast("Something went wrong. Reloading")
+      reloadPage();
       const newQuestions = await LoadGameWithQuestions(gameId)
       setState((prveState)=>({
         ...prveState,
@@ -106,7 +111,7 @@ const Submit = async(e:any)=>{
       WarningToast(error?.response?.data?.message)
       setState(prevState=>({
         ...prevState,
-        attempt:3
+        attempt:state.attempt-1
        }))
     }
   }
@@ -121,20 +126,24 @@ const Submit = async(e:any)=>{
                 {getPoint(state.attempt)}
                  {" "}
                     points</label>, who's the artist of the album name idicated above? <label className='font-bold'>Enter full name</label></h3>
+       {
+        state.attempt ===1?
         <div className="grid md:grid-cols-12 md:gap-1">
-          <div className="">
-          Hint
-          <img src={state.questions?.length>0?state.questions?.[1].collectionName:questions?.[1].artworkUrl100}/>
-            
-          </div>
-          <div className="col-span-10">
-          <input type="text" placeholder='Enter artist full name here' name="artistName" onChange={handlInput}  className="block mt-5 mb-5 text-center md:text-2xl md:w-8/12 mx-auto rounded-md p-2 border-gray-300 pl-7 pr-12 outline outline-md outline-indigo-500 " />        
-
-          </div>
-            
-            
+        <div className="">
+        Hint
+        <img src={state.questions?.length>0?state.questions?.[1].collectionName:questions?.[1].artworkUrl100}/>
+          
         </div>
-            
+        <div className="col-span-10">
+        <input type="text" placeholder='Enter artist full name here' name="artistName" onChange={handlInput}  className="block mt-5 mb-5 text-center md:text-2xl md:w-8/12 mx-auto rounded-md p-2 border-gray-300 pl-7 pr-12 outline outline-md outline-indigo-500 " />        
+
+        </div>
+          
+          
+      </div>:        <input type="text" placeholder='Enter artist full name here' name="artistName" onChange={handlInput}  className="block mt-5 mb-5 text-center md:text-2xl md:w-8/12 mx-auto rounded-md p-2 border-gray-300 pl-7 pr-12 outline outline-md outline-indigo-500 " />        
+
+       }
+  
             
             <span className='mt-7'>
             <ToggleGameButton name='Submit' action={Submit}/>
