@@ -18,7 +18,7 @@ function  IndexPage (props:Props){
 export default IndexPage
 
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const data = await preLoadGame();
   return {
    props:{

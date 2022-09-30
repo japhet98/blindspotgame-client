@@ -16,7 +16,7 @@ function  ScoreBoardPage (props:Props){
 export default ScoreBoardPage
 
 
-export async function getStaticProps(){
+export async function getServerSideProps(){
   const data = await LoadScoreBoardData();
   return {
    props:{
